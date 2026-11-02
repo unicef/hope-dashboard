@@ -1,10 +1,12 @@
-from typing import TypeVar
+from typing import TypeVar, TYPE_CHECKING
 
 from django.db import models
 from rest_framework import renderers, viewsets
-from rest_framework.serializers import BaseSerializer
 
 from ..auth import ApiKeyAuthentication, ApiPermission
+
+if TYPE_CHECKING:
+    from rest_framework.serializers import BaseSerializer
 
 _MT_co = TypeVar("_MT_co", bound=models.Model, covariant=True)
 

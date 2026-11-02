@@ -1,10 +1,12 @@
 import logging
-from typing import Any
+from typing import Any, TYPE_CHECKING
 
 from constance import config
 from django.conf import settings
 from django.contrib.auth.models import Group, User
-from social_core.backends.base import BaseAuth
+
+if TYPE_CHECKING:
+    from social_core.backends.base import BaseAuth
 
 
 logger = logging.getLogger(__name__)

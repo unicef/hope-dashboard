@@ -1,9 +1,11 @@
 import os
-from typing import Any
+from typing import Any, TYPE_CHECKING
 
-from django.http import HttpRequest
 
 from .. import VERSION
+
+if TYPE_CHECKING:
+    from django.http import HttpRequest
 
 
 def app(request: HttpRequest) -> dict[str, Any]:

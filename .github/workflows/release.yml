@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Install the latest version of uv
@@ -20,8 +20,9 @@ jobs:
           enable-cache: true
           cache-dependency-glob: "pyproject.toml"
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          python-version: "3.14"
       - name: Build package
-        run: uv build --python 3.13 --python-preference only-managed --sdist --wheel . --out-dir dist
+        run: uv build --python 3.14 --python-preference only-managed --sdist --wheel . --out-dir dist
       - name: Store the distribution packages
         uses: actions/upload-artifact@v7
         with:

@@ -1,12 +1,15 @@
 import django_filters.rest_framework
 from django.contrib.auth.models import Group, Permission
-from django.http import HttpRequest
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
 from ...models import User
 from ..serializers import GroupListSerializer, PermissionListSerializer, PermissionSerializer, UserListSerializer
 from .base import BaseReadOnlyModelViewSet
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from django.http import HttpRequest
 
 
 class PermissionViewSet(BaseReadOnlyModelViewSet):

@@ -3,9 +3,9 @@ from typing import TYPE_CHECKING, Any
 from django.apps import AppConfig
 from django.conf import settings
 from django.contrib.auth.signals import user_logged_in
-from django.db.models import Model
 
 if TYPE_CHECKING:
+    from django.db.models import Model
     from hope_dashboard.models import User
 
 

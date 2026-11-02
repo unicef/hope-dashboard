@@ -3,11 +3,11 @@ from typing import TYPE_CHECKING
 
 from rest_framework import authentication
 from rest_framework.permissions import DjangoObjectPermissions
-from rest_framework.request import Request
 
 from ..models import ApiKey, User
 
 if TYPE_CHECKING:
+    from rest_framework.request import Request
     from rest_framework.views import APIView
     from django.db.models import Model
 

@@ -13,10 +13,9 @@ license = { text = "MIT" }
 authors = [
   { name = "HOPE Team", email = "hope@unicef.org" },
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
   "Programming Language :: Python :: 3.15",
 ]

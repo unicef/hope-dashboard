@@ -44,6 +44,7 @@ def test_add_cookies(state: State) -> None:
         "httponly": True,
         "max-age": 3600,
         "path": "/path/",
+        "partitioned": "",
         "samesite": "lax",
         "secure": True,
         "version": "",

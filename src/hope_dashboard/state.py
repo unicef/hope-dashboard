@@ -1,13 +1,13 @@
 import contextlib
 import json
 from copy import copy
-from datetime import datetime, timedelta
 from threading import local
 from typing import TYPE_CHECKING, Any, Iterator, Mapping
 
-from django.http import HttpRequest, HttpResponse
 
 if TYPE_CHECKING:
+    from django.http import HttpRequest, HttpResponse
+    from datetime import datetime, timedelta
     from hope_dashboard.types.django import JsonType
 
 not_set = object()

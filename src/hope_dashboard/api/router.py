@@ -1,12 +1,14 @@
-from typing import Any
+from typing import Any, TYPE_CHECKING
 
 from rest_framework import status
-from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.routers import APIRootView
 from rest_framework_extensions.routers import ExtendedDefaultRouter
 
 from . import viewsets as vs
+
+if TYPE_CHECKING:
+    from rest_framework.request import Request
 
 
 class RootView(APIRootView):

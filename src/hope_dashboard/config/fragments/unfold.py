@@ -1,8 +1,11 @@
 from django.conf import settings
-from django.http import HttpRequest
 from django.templatetags.static import static
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from django.http import HttpRequest
 
 UNFOLD = {
     "SITE_DROPDOWN": [
