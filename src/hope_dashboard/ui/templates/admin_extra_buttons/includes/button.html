@@ -1,0 +1,11 @@
+{% spaceless %}
+    <li class="md:-ml-px md:first:rounded-l-default dark:hover:text-primary-500 dark:border-base-700 max-md:first:rounded-t-default md:last:rounded-r-default hover:text-primary-600 max-md:last:rounded-b-default border border-base-200 max-md:-mt-px">
+        <a href="{{ button.url }}{% if is_popup %}&_popup=1{% endif %}"
+           class="cursor-pointer flex grow items-center gap-2 px-3 py-2 text-left whitespace-nowrap">
+            {% if button.icon %}
+                <i class="{{ button.icon }}"></i>&nbsp;
+            {% endif %}
+            {{ button.label|title }}
+        </a>
+    </li>
+{% endspaceless %}

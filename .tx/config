@@ -1,0 +1,8 @@
+[main]
+host = https://app.transifex.com
+
+[o:unicef-hope:p:hope-dashboard:r:django_po]
+file_filter = src/hope_dashboard/LOCALE/<lang>/LC_MESSAGES/django.po
+source_file = src/hope_dashboard/LOCALE/<lang>/LC_MESSAGES/django.po
+source_lang = en
+type = PO

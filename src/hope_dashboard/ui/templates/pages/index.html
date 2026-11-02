@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+{% block header %}
+{% endblock header %}
+{% block page %}
+    <div class="flex flex-col justify-center items-center pt-10">
+        <div class="banner">
+            <img class="m-auto w-1/2" src="{% static "images/hope_transparent.png" %}" alt="logo" />
+            <div class="app-name">HOPE Dashboard</div>
+            <div class="app-local-name no-eng">{% trans "{{ cookiecutter.project_title }}" %}</div>
+        </div>
+        <div class="mx-auto mb-10 mt-5">
+            {% if user.is_authenticated %}
+                <form action="{% url "ui:logout" %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-primary" value="{% trans "Logout" %}" />
+                </form>
+            {% else %}
+                <a class="btn btn-primary" href="{% url "ui:login" %}">{% trans "Login" %}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock page %}
